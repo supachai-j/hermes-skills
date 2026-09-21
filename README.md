@@ -21,6 +21,29 @@ when and how to use it.
   checks in this skill require an actual search/read/execute, not just
   "thinking harder."
 
+- **[messaging-only-credential-setup](./messaging-only-credential-setup/)** —
+  How an AI agent should handle credential provisioning and content delivery
+  when the user only has chat-platform access (Discord/Telegram/etc.), no
+  terminal or filesystem. Covers checking actual access level before
+  proposing a remediation path, writing secrets only to `.env` (never
+  memory/skill files), and choosing inline text vs. file attachment vs. a
+  hosted link based on what the user's device can actually open.
+
+- **[secret-setup-no-terminal](./secret-setup-no-terminal/)** — Narrower
+  companion to the above: the specific procedure for getting an API
+  key/credential into an agent's `.env` when the only channel is messaging,
+  including the informed-consent step before accepting a secret over chat
+  and verifying the credential with a real API call before declaring success.
+
+- **[context-budget-management](./context-budget-management/)** — How to
+  decide what belongs in an AI agent's persistent memory (small, high-signal,
+  read every turn) versus a skill (detailed, loaded contextually, no
+  practical size ceiling), including a checklist for scrubbing personal
+  data/credentials from a skill before sharing or publishing it outside its
+  original profile (see `references/sharing-skills.md` for the full channel
+  list — direct copy, snapshot export, private tap, public registry, or a
+  plain public GitHub repo).
+
 ## Using these skills
 
 Drop a skill's directory into your agent's skills folder (for Hermes:
