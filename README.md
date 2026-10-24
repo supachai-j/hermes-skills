@@ -44,6 +44,14 @@ when and how to use it.
   list — direct copy, snapshot export, private tap, public registry, or a
   plain public GitHub repo).
 
+- **[hermes-home-maintenance](./hermes-home-maintenance/)** — Audit a Hermes
+  home directory (`~/.hermes`) read-only, then prune what Hermes does not clean
+  by itself: surplus quick snapshots of one label, old hand-made `.bak` copies of
+  credential/config files, and npm/pip caches. Dry-run by default, never reads
+  secret contents, leaves conversation retention to the data owner. Ships two
+  bash scripts (`audit.sh`, `housekeeping.sh`). Syntax-checked and run on one
+  installation only.
+
 ## Using these skills
 
 Drop a skill's directory into your agent's skills folder (for Hermes:
